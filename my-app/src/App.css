@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(./header_start_img.jpg);
+  background-size: 75%;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  width: 1400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.login ul {
+  margin-top: 20px;
+  padding:  0 20px;
+  font-size: 13px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.login ul li a {
+  text-decoration: none;
+}
+
+.login ul li a:hover {
+  border: 1px solid gold;
+  padding: 5px 10px;
+}
+
+.menu ul {
+  margin-top: 20px;
+  padding: 20px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+.buttons {
+  height: 400px;
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 35px;
+  text-align: center;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+}
+
+.decoration {
+  height: 40px;
+  width: 300px;
+  margin: 30px 0;
+  background-image: url(./decoration.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn-container {
+  height: 100px;
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons button {
+  font-size: 30px;
+  background: none;
+  border: 1px solid black;
+}
+.buttons button:focus {
+  outline: none;
+}
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.btn-left {
+  width: 200px;
+  height: 100px;
+}
+
+.btn-right {
+  width: 250px;
+  height: 100px;
+}
