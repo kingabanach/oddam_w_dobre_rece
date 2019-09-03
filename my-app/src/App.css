@@ -15,7 +15,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 100vw;
+  width: 1586px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,10 +34,10 @@ body {
 }
 
 .login ul {
-  margin-top: 20px;
+  margin-top: 40px;
   padding:  0 20px;
   font-size: 13px;
-  width: 150px;
+  width: 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +52,7 @@ body {
   text-decoration: none;
   background: none;
   border: none;
+  padding: 5px 10px;
 }
 
 .login ul li button:hover {
@@ -66,8 +67,8 @@ body {
 
 .menu ul {
   margin-top: 20px;
-  padding: 20px;
-  width: 600px;
+  padding: 20px 10px;
+  width: 700px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,10 +83,11 @@ body {
   text-decoration: none;
   background: none;
   border: none;
+  padding: 10px 20px;
 }
 
 .menu ul li button:hover {
-  border: 1px solid black;
+  border: 1px solid #666;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -116,8 +118,8 @@ body {
 }
 
 .decoration {
-  height: 40px;
-  width: 300px;
+  height: 32px;
+  width: 250px;
   margin: 30px 0;
   background-image: url(./decoration.png);
   background-size: cover;
@@ -142,7 +144,7 @@ body {
   font-weight: 300;
   font-size: 30px;
   background: none;
-  border: 1px solid black;
+  border: 1px solid #666;
 }
 .buttons button:focus {
   outline: none;
@@ -150,7 +152,7 @@ body {
 
 .buttons button:hover {
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid #666;
 }
 
 .btn-left {
@@ -163,9 +165,15 @@ body {
   height: 100px;
 }
 
+.statistics {
+  background-color: #f8ce12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .statistics-container {
   height: 300px;
-  background-color: #f8ce12;
+  width: 1400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -188,6 +196,111 @@ body {
   padding: 10px 0 30px 0;
   }
 
-.statistics-container div p {
+.four-steps {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.four-steps-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.four-steps-inner-container h1 {
+  font-weight: 400;
+}
+
+.steps {
+  height: 200px;
+  width: 1000px;
+  background-color: #ddd;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.register-btn {
+  height: 80px;
+  width: 300px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background: none;
+  border: 1px solid #666;
+}
+
+.register-btn:hover {
+  border: 2px solid #666;
+  cursor: pointer;
+}
+
+.register-btn:focus {
+  outline: none;
+}
+
+.step {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.step i {
+  font-size: 35px;
+}
+
+.step hr {
+  width: 60%;
+}
+
+.step p {
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.about {
+  height: 800px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.about-text {
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-text p:first-of-type {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.about-text p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 45px;
+}
+
+.about-image {
+  height: 700px;
+  width: 900px;
+  background-image: url(./about.jpg);
+  background-size: cover;
 }
