@@ -4,7 +4,10 @@ import './App.css';
 
 function App() {
   return (
+    <>
     <Header />
+    <Statistics/>
+    </>
   );
 }
 
@@ -25,17 +28,17 @@ class Navigation extends React.Component {
       <section className="navigation">
         <nav className="login">
           <ul>
-            <li><a href="#">Zaloguj</a></li>
-            <li><a href="#">Załóż konto</a></li>
+            <li><button>Zaloguj</button></li>
+            <li><button>Załóż konto</button></li>
           </ul>
         </nav>
         <nav className="menu">
           <ul>
-            <li><a href="#">Start</a></li>
-            <li><a href="#">O co chodzi?</a></li>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Fundacje i organizacje</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><button>Start</button></li>
+            <li><button>O co chodzi?</button></li>
+            <li><button>O nas</button></li>
+            <li><button>Fundacje i organizacje</button></li>
+            <li><button>Kontakt</button></li>
           </ul>
         </nav>
       </section>
@@ -62,6 +65,35 @@ class Buttons extends React.Component {
     )
   }
 }
+
+class Statistics extends React.Component {
+  render() {
+    return (
+      <div className="statistics-container">
+        <div className="sent">
+          <h1>10</h1>
+          <h3>ODDANYCH WORKÓW</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus a repellat quia aperiam quod deleniti!</p>
+        </div>
+        <div className="support">
+        <h1>5</h1>
+          <h3>WSPARTYCH ORGANIZACJI</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus a repellat quia aperiam quod deleniti!</p>
+        </div>
+        <div className="giveaway">
+        <h1>7</h1>
+          <h3>ZORGANIZOWANYCH ZBIÓREK</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus a repellat quia aperiam quod deleniti!</p>
+        </div>
+      </div>
+    )
+  }
+}
+
+
+
+
+
 export default App;
 
 
