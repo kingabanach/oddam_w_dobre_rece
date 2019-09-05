@@ -1,6 +1,28 @@
 import React from 'react';
 import './App.css';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll';
+
+let orgArray =
+[
+  {
+    type: "foundation",
+    name: 'Fundacja "Dbam o zdrowie"',
+    purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+    needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+  },
+  {
+    type:'foundation',
+    name: 'Fundacja "Dla Dzieci"',
+    purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
+    needs: 'ubrania, meble, zabawki'
+  },
+  {
+    type: 'foundation',
+    name: 'Fundacja "Bez domu"',
+    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+    needs: 'ubrania, jedzenie, ciepłe koce'
+  }
+]
 
 function App() {
   return (
@@ -131,25 +153,25 @@ class Steps extends React.Component {
           <div className="decoration"></div>
           <div className="steps">
             <div className="step">
-            <i class="fa fa-check"></i>
+            <i className="fa fa-check"></i>
               <p>Wybierz rzeczy</p>
               <hr></hr>
               <p>ubrania, zabawki, sprzęt i inne</p>
             </div>
             <div className="step">
-              <i class="fa fa-arrow-down"></i>
+              <i className="fa fa-arrow-down"></i>
               <p>Spakuj je</p>
               <hr></hr>
               <p>skorzystaj z worków na śmieci</p>
             </div>
             <div className="step">
-              <i class="fa fa-binoculars"></i>
+              <i className="fa fa-binoculars"></i>
               <p>Zdecyduj komu chcesz pomóc</p>
               <hr></hr>
               <p>wybierz zaufane miejsce</p>
             </div>
             <div className="step">
-            <i class="fa fa-user"></i>
+            <i className="fa fa-user"></i>
               <p>Zamów kuriera</p>
               <hr></hr>
               <p>kurier przyjedzie w dogodnym terminie</p>
@@ -179,19 +201,22 @@ class About extends React.Component {
 
 class Organizations extends React.Component {
   render() {
+    console.log(orgArray[0].type);
       return(
           <div className="organizations-wrapper">
               <div className="organizations-select">
                   <h1>Komu pomagamy?</h1>
                   <div className="decoration"></div>
-                  <div className="options">
-                      <button>Fundacjom</button>
-                      <button>Organizacjom pozarządowym</button>
-                      <button>Lokalnym zbiórkom</button>
-                  <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                  <div className="organizations-buttons">
+                      <button className="fund-btn">Fundacjom</button>
+                      <button className="org-btn">Organizacjom pozarządowym</button>
+                      <button className="local-btn">Lokalnym zbiórkom</button>
                   </div>
+                  <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
               </div>
-              <div className="organizations-list"></div>
+              <div className="organizations-list">
+                
+              </div>
           </div>
       )
   }
