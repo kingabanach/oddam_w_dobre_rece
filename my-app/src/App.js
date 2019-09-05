@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
     <Statistics/>
     <Steps/>
     <About/>
+    <Organizations/>
     </>
   );
 }
@@ -25,6 +26,7 @@ class Header extends React.Component {
 }
 
 class Navigation extends React.Component {
+
   render() {
     return (
       <section className="navigation">
@@ -37,8 +39,34 @@ class Navigation extends React.Component {
         <nav className="menu">
           <ul>
             <li><button>Start</button></li>
-            <li><button>O co chodzi?</button></li>
-            <li><button>O nas</button></li>
+            <Link activeClass="active"
+      to="steps"
+      spy={true}
+      smooth={true}
+      hashSpy={true}
+      offset={-80}
+      duration={500}
+      isDynamic={true}
+      onSetActive={this.handleSetActive}
+      onSetInactive={this.handleSetInactive}
+      ignoreCancelEvents={false}
+>
+  O co chodzi?
+</Link>
+<Link activeClass="active"
+      to="about"
+      spy={true}
+      smooth={true}
+      hashSpy={true}
+      offset={20}
+      duration={500}
+      isDynamic={true}
+      onSetActive={this.handleSetActive}
+      onSetInactive={this.handleSetInactive}
+      ignoreCancelEvents={false}
+>
+  O nas
+</Link>
             <li><button>Fundacje i organizacje</button></li>
             <li><button>Kontakt</button></li>
           </ul>
@@ -97,7 +125,7 @@ class Statistics extends React.Component {
 class Steps extends React.Component {
   render() {
     return (
-      <div className="four-steps">
+      <div className="four-steps" id="steps">
         <div className="four-steps-inner-container">
           <h1>Wystarczą 4 proste kroki</h1>
           <div className="decoration"></div>
@@ -137,7 +165,7 @@ class Steps extends React.Component {
 class About extends React.Component {
   render() {
     return (
-      <div className="about">
+      <div className="about" id="about">
         <div className="about-text">
           <p>O nas</p>
           <div className="decoration"></div>
@@ -146,6 +174,26 @@ class About extends React.Component {
         <div className="about-image"></div>
       </div>
     )
+  }
+}
+
+class Organizations extends React.Component {
+  render() {
+      return(
+          <div className="organizations-wrapper">
+              <div className="organizations-select">
+                  <h1>Komu pomagamy?</h1>
+                  <div className="decoration"></div>
+                  <div className="options">
+                      <button>Fundacjom</button>
+                      <button>Organizacjom pozarządowym</button>
+                      <button>Lokalnym zbiórkom</button>
+                  <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                  </div>
+              </div>
+              <div className="organizations-list"></div>
+          </div>
+      )
   }
 }
 
