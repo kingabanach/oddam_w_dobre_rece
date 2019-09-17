@@ -76,7 +76,7 @@ body {
   list-style-type: none;
 }
 
-.menu ul li button {
+.menu-link {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -86,13 +86,13 @@ body {
   padding: 10px 20px;
 }
 
-.menu ul li button:hover {
+.menu-link:hover {
   border: 1px solid #666;
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.menu ul li button:focus {
+.menu-link:focus {
   outline: none;
 }
 

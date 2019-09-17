@@ -2,27 +2,8 @@ import React from 'react';
 import './App.css';
 import { Link } from 'react-scroll';
 
-let orgArray =
-[
-  {
-    type: "foundation",
-    name: 'Fundacja "Dbam o zdrowie"',
-    purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
-    needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
-  },
-  {
-    type:'foundation',
-    name: 'Fundacja "Dla Dzieci"',
-    purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
-    needs: 'ubrania, meble, zabawki'
-  },
-  {
-    type: 'foundation',
-    name: 'Fundacja "Bez domu"',
-    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
-    needs: 'ubrania, jedzenie, ciepłe koce'
-  }
-]
+
+
 
 function App() {
   return (
@@ -60,36 +41,61 @@ class Navigation extends React.Component {
         </nav>
         <nav className="menu">
           <ul>
-            <li><button>Start</button></li>
-            <Link activeClass="active"
-      to="steps"
-      spy={true}
-      smooth={true}
-      hashSpy={true}
-      offset={-80}
-      duration={500}
-      isDynamic={true}
-      onSetActive={this.handleSetActive}
-      onSetInactive={this.handleSetInactive}
-      ignoreCancelEvents={false}
+          <Link className="menu-link" activeClass="active"
+                    to="start"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-20}
+                    duration={500}
+                    isDynamic={true}
+                    onSetActive={this.handleSetActive}
+                    onSetInactive={this.handleSetInactive}
+                    ignoreCancelEvents={false}
+              >
+              Start
+              </Link>
+              <Link className="menu-link" activeClass="active"
+              to="steps"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              offset={-80}
+              duration={500}
+              isDynamic={true}
+              onSetActive={this.handleSetActive}
+              onSetInactive={this.handleSetInactive}
+              ignoreCancelEvents={false}
 >
-  O co chodzi?
-</Link>
-<Link activeClass="active"
-      to="about"
-      spy={true}
-      smooth={true}
-      hashSpy={true}
-      offset={20}
-      duration={500}
-      isDynamic={true}
-      onSetActive={this.handleSetActive}
-      onSetInactive={this.handleSetInactive}
-      ignoreCancelEvents={false}
->
-  O nas
-</Link>
-            <li><button>Fundacje i organizacje</button></li>
+              O co chodzi?
+              </Link>
+              <Link className="menu-link" activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={20}
+                    duration={500}
+                    isDynamic={true}
+                    onSetActive={this.handleSetActive}
+                    onSetInactive={this.handleSetInactive}
+                    ignoreCancelEvents={false}
+              >
+              O nas
+              </Link>
+              <Link className="menu-link" activeClass="active"
+                    to="organizations"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={20}
+                    isDynamic={true}
+                    onSetActive={this.handleSetActive}
+                    onSetInactive={this.handleSetInactive}
+                    ignoreCancelEvents={false}
+              >
+              Fundacje i organizacje
+              </Link>
             <li><button>Kontakt</button></li>
           </ul>
         </nav>
@@ -101,7 +107,7 @@ class Navigation extends React.Component {
 class Buttons extends React.Component {
   render() {
     return (
-      <div className="buttons">
+      <div className="buttons" id="start">
         <div className="content-container">
           <div className="text-container">
             <p>Zacznij pomagać!</p>
@@ -201,9 +207,8 @@ class About extends React.Component {
 
 class Organizations extends React.Component {
   render() {
-    console.log(orgArray[0].type);
       return(
-          <div className="organizations-wrapper">
+          <div className="organizations-wrapper" id="organizations">
               <div className="organizations-select">
                   <h1>Komu pomagamy?</h1>
                   <div className="decoration"></div>
@@ -215,13 +220,55 @@ class Organizations extends React.Component {
                   <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
               </div>
               <div className="organizations-list">
-                
+                <ListElement/>
               </div>
           </div>
       )
   }
 }
 
+class ListElement extends React.Component {
+  render() {
+    const clients =
+[
+  {
+    type: "foundation",
+    name: 'Fundacja "Dbam o zdrowie"',
+    purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+    needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+  },
+  {
+    type:'foundation',
+    name: 'Fundacja "Dla Dzieci"',
+    purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
+    needs: 'ubrania, meble, zabawki'
+  },
+  {
+    type: 'foundation',
+    name: 'Fundacja "Bez domu"',
+    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+    needs: 'ubrania, jedzenie, ciepłe koce'
+  },
+  {
+    type: 'organization',
+    name: 'Organizacja Beznazwy',
+    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+    needs: 'ubrania, jedzenie, ciepłe koce'
+  },
+  {
+    type: 'local',
+    name: 'Fundacja "Bez domu"',
+    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+    needs: 'ubrania, jedzenie, ciepłe koce'
+  },
+];
+
+    return (
+      <p>{clients[1].type}</p>
+    )
+    
+  }
+}
 export default App;
 
 
