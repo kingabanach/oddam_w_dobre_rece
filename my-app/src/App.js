@@ -264,7 +264,10 @@ class ListElement extends React.Component {
 ];
 
     return (
-      <p>{clients[1].type}</p>
+      <div className="list-element">
+        <p>{clients[0].name}</p>
+        <p>{clients[0].purpose}</p>
+      </div>
     )
     
   }
