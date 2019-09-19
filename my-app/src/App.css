@@ -310,6 +310,7 @@ body {
   height: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -365,11 +366,24 @@ body {
 }
 
 .list-element {
-  height: 200px;
-  width: 400px;
+  height: 100px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.list-element p {
-  height: 50px;
-  width: 400px;
+.list-element span {
+  height: 100px;
+  width: 450px;
+  border-bottom: 1px solid #666;
+  font-size: 20px;
+  font-weight: 400;
+}
+.list-element span:nth-of-type(2) {
+  font-size: 15px;
+}
+.list-element span p {
+  font-size: 15px;
+  font-style: italic;
 }
