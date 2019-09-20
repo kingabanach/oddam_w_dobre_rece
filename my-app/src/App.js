@@ -271,6 +271,7 @@ class ListElement extends React.Component {
       
         <span><br/>{clients[0].needs}</span>
       </div>
+      <div></div>
     )
     
   }
