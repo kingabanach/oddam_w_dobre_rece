@@ -220,41 +220,46 @@ class Organizations extends React.Component {
                   <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
               </div>
               <div className="organizations-list">
-                <ListElement/>
+                <ListItem/>
               </div>
           </div>
       )
   }
 }
 
-class ListElement extends React.Component {
+class ListItem extends React.Component {
 
   state = [
     {
+      id: 1,
       type: "foundation",
       name: 'Fundacja "Dbam o zdrowie"',
       purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
       needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
     },
     {
+      id: 2,
       type:'foundation',
       name: 'Fundacja "Dla Dzieci"',
       purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
       needs: 'ubrania, meble, zabawki'
     },
     {
+      id: 3,
       type: 'foundation',
       name: 'Fundacja "Bez domu"',
       purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
       needs: 'ubrania, jedzenie, ciepłe koce'
     },
     {
+      id: 4,
       type: 'organization',
       name: 'Organizacja Beznazwy',
       purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
       needs: 'ubrania, jedzenie, ciepłe koce'
     },
     {
+      id: 5,
       type: 'local',
       name: 'Fundacja "Bez domu"',
       purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
@@ -265,12 +270,17 @@ class ListElement extends React.Component {
   render() {
    
     return (
-      <div className="list-element">
+      <div className="list-item">
+        <ul>
+          <li>
         <span>{this.state[0].name}<br/>
         <p>{this.state[0].purpose}</p></span>
       
         <span><br/>{this.state[0].needs}</span>
+          </li>
+        </ul>
       </div>
+      
     )
     
   }
