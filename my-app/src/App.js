@@ -228,54 +228,56 @@ class Organizations extends React.Component {
 }
 
 class ListElement extends React.Component {
-  render() {
-    const clients =
-[
-  {
-    type: "foundation",
-    name: 'Fundacja "Dbam o zdrowie"',
-    purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
-    needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
-  },
-  {
-    type:'foundation',
-    name: 'Fundacja "Dla Dzieci"',
-    purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
-    needs: 'ubrania, meble, zabawki'
-  },
-  {
-    type: 'foundation',
-    name: 'Fundacja "Bez domu"',
-    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
-    needs: 'ubrania, jedzenie, ciepłe koce'
-  },
-  {
-    type: 'organization',
-    name: 'Organizacja Beznazwy',
-    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
-    needs: 'ubrania, jedzenie, ciepłe koce'
-  },
-  {
-    type: 'local',
-    name: 'Fundacja "Bez domu"',
-    purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
-    needs: 'ubrania, jedzenie, ciepłe koce'
-  },
-];
 
+  state = [
+    {
+      type: "foundation",
+      name: 'Fundacja "Dbam o zdrowie"',
+      purpose: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+      needs: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      type:'foundation',
+      name: 'Fundacja "Dla Dzieci"',
+      purpose: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
+      needs: 'ubrania, meble, zabawki'
+    },
+    {
+      type: 'foundation',
+      name: 'Fundacja "Bez domu"',
+      purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+      needs: 'ubrania, jedzenie, ciepłe koce'
+    },
+    {
+      type: 'organization',
+      name: 'Organizacja Beznazwy',
+      purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+      needs: 'ubrania, jedzenie, ciepłe koce'
+    },
+    {
+      type: 'local',
+      name: 'Fundacja "Bez domu"',
+      purpose: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania',
+      needs: 'ubrania, jedzenie, ciepłe koce'
+    },
+  ]
+
+  render() {
+   
     return (
       <div className="list-element">
-
-        <span>{clients[0].name}<br/>
-        <p>{clients[0].purpose}</p></span>
+        <span>{this.state[0].name}<br/>
+        <p>{this.state[0].purpose}</p></span>
       
-        <span><br/>{clients[0].needs}</span>
+        <span><br/>{this.state[0].needs}</span>
       </div>
-      <div></div>
     )
     
   }
 }
+
+
+
 export default App;
 
 
